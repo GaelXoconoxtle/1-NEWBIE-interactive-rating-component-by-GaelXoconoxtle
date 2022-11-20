@@ -1,0 +1,103 @@
+@use '../util/' as u;
+
+.main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    background-color: u.$dark-blue;
+    max-width: u.rem(328);
+    padding: u.rem(26);
+    border-radius: u.rem(16);
+    height: u.rem(347);
+    margin: u.rem(16);
+  }
+
+  &__star {
+    background-color: u.$dark-blue2;
+    padding: u.rem(10);
+    border-radius: 50%;
+    margin-bottom: u.rem(16);
+  }
+
+  &__h1 {
+    font-weight: 700;
+    color: u.$white;
+    font-size: u.rem(24);
+    margin-bottom: u.rem(12);
+  }
+
+  &__text {
+    color: u.$light-grey;
+    margin-bottom: u.rem(30);
+
+    &__rating {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    margin-bottom: u.rem(24);
+    user-select: none;
+
+    li {
+      width: u.rem(42);
+      height: u.rem(42);
+      line-height: u.rem(42);
+      text-align: center;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 100ms ease-in-out;
+
+      &:hover {
+        background-color: u.$orange;
+        color: white;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: u.rem(12) 0;
+    background-color: u.$orange;
+    border-style: none;
+    border-radius: u.rem(24);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    font-size: u.rem(15);
+    color: u.$white;
+    margin-bottom: u.rem(6);
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+
+    &:hover {
+      background-color: u.$orange2;
+    }
+
+    &:active {
+      background-color: u.$white;
+      color: u.$orange;
+      transition: none;
+    }
+  }
+
+  &__rating-text {
+    color: u.$orange;
+    background-color: u.$dark-blue2;
+    display: inline-block;
+    padding: u.rem(6) u.rem(12);
+    border-radius: u.rem(18);
+    margin-bottom: u.rem(26);
+  }
+
+  &__mobileimg {
+    width: 50%;
+    margin-bottom: u.rem(20);
+    margin-top: u.rem(14);
+  }
+}
